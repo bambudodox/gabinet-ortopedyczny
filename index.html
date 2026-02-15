@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ortopeda Piła – Gabinet ortopedyczny lek. Przemysław Wicher</title>
+  <meta name="description" content="Ortopeda w Pile: konsultacje, USG narządu ruchu, iniekcje dostawowe, PRP, leczenie urazów i złamań. Zadzwoń." />
+  <meta name="keywords" content="ortopeda Piła, USG ortopedyczne Piła, iniekcje dostawowe Piła, PRP Piła, leczenie złamań Piła" />
+  <style>
+    :root{
+      --bg:#070b13;
+      --bg2:#0b1220;
+      --panel: rgba(15,26,46,.78);
+      --panel2: rgba(15,26,46,.55);
+      --text:#e8eefc;
+      --muted: rgba(232,238,252,.75);
+      --muted2: rgba(232,238,252,.6);
+      --line: rgba(232,238,252,.12);
+      --accent:#0b5fff;
+      --accent2: rgba(11,95,255,.18);
+      --radius: 18px;
+      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --container: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 15% 0%, rgba(11,95,255,.22) 0%, rgba(11,95,255,0) 60%),
+                  radial-gradient(900px 500px at 85% 15%, rgba(102,163,255,.16) 0%, rgba(102,163,255,0) 55%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg2) 50%, var(--bg) 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:none;filter:brightness(1.08)}
+    .container{max-width:var(--container);margin:0 auto;padding:0 18px}
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;color:#000;padding:10px 12px;border-radius:10px;z-index:1000}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(7,11,19,.62);backdrop-filter: blur(10px);border-bottom:1px solid var(--line)}
+    .header-inner{display:flex;align-items:center;gap:14px;min-height:72px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:14px;background:var(--accent2);display:grid;place-items:center;font-weight:900;letter-spacing:.5px}
+    .brand-name{font-weight:850;letter-spacing:.2px}
+    .brand-tagline{font-size:12px;color:var(--muted2)}
+    .nav{display:flex;gap:16px;margin-left:auto}
+    .nav a{font-size:14px;color:var(--muted);padding:8px 10px;border-radius:12px}
+    .nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+  .nav a{border:1px solid transparent}
+  .nav a:focus{outline:2px solid rgba(11,95,255,.5);outline-offset:2px}
+
+    .header-cta{display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:var(--accent);color:#fff;border:1px solid rgba(255,255,255,.08);
+      padding:10px 12px;border-radius:14px;font-weight:700;
+      box-shadow:0 10px 22px rgba(11,95,255,.18)
+    }
+    .btn:hover{filter:brightness(1.08)}
+    .btn-ghost{background:transparent;color:var(--text);box-shadow:none;border:1px solid var(--line)}
+    .btn-lg{padding:12px 14px;border-radius:16px}
+    .btn-block{width:100%}
+
+    /* Sections */
+    .hero{padding:58px 0 28px;border-bottom:1px solid var(--line)}
+    .hero-inner{display:grid;grid-template-columns:1.25fr .9fr;gap:22px;align-items:stretch}
+    .hero-copy h1{font-size:46px;line-height:1.05;margin:0 0 12px;letter-spacing:-.4px}
+    .lead{font-size:16px;color:var(--muted);line-height:1.65;margin:0 0 14px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
+    .badge{font-size:13px;color:var(--text);background:rgba(255,255,255,.06);border:1px solid var(--line);padding:8px 10px;border-radius:999px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .fineprint{font-size:12px;color:var(--muted2);margin:14px 0 0}
+
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card-title{font-weight:850;margin-bottom:10px}
+    .card-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0}
+    .divider{height:1px;background:var(--line);margin:14px 0}
+    .hours{display:grid;gap:8px}
+    .hour{display:flex;justify-content:space-between;gap:12px;color:var(--muted)}
+
+    .section{padding:46px 0}
+    .section.alt{background:rgba(255,255,255,.03);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .section.micro{padding:26px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .section-head h2{margin:0;font-size:26px}
+    .muted{color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{padding:16px;border-radius:var(--radius);background:var(--panel2);border:1px solid var(--line)}
+    .service h3{margin:0 0 8px;font-size:16px}
+    .service p{margin:0;color:var(--muted);line-height:1.55}
+
+    .pricing{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel2)}
+    .price-row{display:grid;grid-template-columns:1.5fr .5fr;gap:10px;padding:14px 16px;border-top:1px solid var(--line)}
+    .price-row:first-child{border-top:none}
+    .price-row .right{text-align:right;color:var(--text);font-weight:800}
+    .price-row .left{color:var(--muted)}
+
+    .two-col{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:start}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.75}
+
+    .accordion{display:grid;gap:10px}
+    .faq{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel2)}
+    .faq button{width:100%;text-align:left;background:transparent;border:none;color:var(--text);padding:14px 16px;font-weight:850;display:flex;justify-content:space-between;gap:14px;cursor:pointer}
+    .faq .a{padding:0 16px 14px;color:var(--muted);line-height:1.6}
+    .chev{opacity:.8}
+
+    .contact-box{display:grid;gap:12px;margin:14px 0 18px}
+    .contact-item{padding:12px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel2)}
+    .map iframe{width:100%;height:360px;border:0;border-radius:14px}
+
+    .site-footer{padding:22px 0;border-top:1px solid var(--line);background:rgba(7,11,19,.7)}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .footer-right{font-size:13px;color:var(--muted2)}
+
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);font-size:13px}
+
+    @media (max-width: 920px){
+  .hero-inner{grid-template-columns:1fr;gap:14px}
+  .grid{grid-template-columns:1fr 1fr}
+  .two-col{grid-template-columns:1fr}
+  /* Mobile: keep top nav visible as horizontal scroll */
+  .nav{display:flex;gap:10px;margin-left:0;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding:8px 2px;}
+  .nav::-webkit-scrollbar{height:0}
+  .nav a{flex:0 0 auto}
+  .header-inner{gap:10px}
+  .header-cta{display:none}
+  .brand-tagline{display:none}
+}
+
+    @media (max-width: 520px){
+      .hero-copy h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* Tiny “editable markers” for you */
+    .edit-hint{font-size:12px;color:var(--muted2);margin-top:10px}
+    code.inline{background:rgba(255,255,255,.06);border:1px solid var(--line);padding:2px 6px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">W</div>
+        <div>
+          <div class="brand-name">Gabinet ortopedyczny lek. Przemysław Wicher</div>
+          <div class="brand-tagline">Ortopedia • USG • Iniekcje • PRP • Urazy</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Nawigacja">
+        <a href="#uslugi">Usługi</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="header-cta">
+        
+        <a class="btn" href="tel:+48501550001">Zadzwoń</a>
+      </div>
+</div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="pill">📍 Piła • prywatny gabinet<br><span style="font-size:14px; opacity:0.8;">ul. Kwiatowa 3A/1</span></div>
+          <h1>Ortopeda w Pile</h1>
+          <p class="lead">
+            Konsultacje ortopedyczne, badanie USG narządu ruchu w gabinecie, iniekcje dostawowe (również pod kontrolą USG)
+            oraz terapia PRP. Plan leczenia i rehabilitacji dopasowany do Twojej aktywności i celu.
+          </p>
+
+          <div class="badges">
+            <span class="badge">USG w gabinecie</span>
+            <span class="badge">Iniekcje</span>
+            <span class="badge">PRP</span>
+            <span class="badge">Urazy</span>
+            <span class="badge">Bóle przeciążeniowe</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-lg" href="tel:+48501550001">Zadzwoń</a>
+            
+          </div>
+
+          <p class="fineprint">
+            Masz wyniki badań (RTG/MR/TK/USG)? Zabierz je na wizytę — omówimy je na miejscu.
+          </p>
+
+          
+        </div>
+
+        <div class="hero-card" aria-label="Szybkie informacje">
+          <div class="card">
+            <div class="card-title">Szybki kontakt</div>
+            <div class="card-row">
+              <div class="muted">Telefon</div>
+              <a href="tel:+48501550001">501 550 001</a>
+            </div>
+            <div class="card-row">
+              <div class="muted">Kontakt SMS</div>
+              <a href="sms:+48501287001">501 287 001</a>
+            </div>
+            <div class="divider"></div>
+            
+<div class="card-title">Godziny</div>
+<div class="hours">
+  <div class="hour"><div>Poniedziałek</div><div>16:00–20:00</div></div>
+  <div class="hour"><div>Wtorek</div><div>16:00–20:00</div></div>
+  <div class="hour"><div>Piątek</div><div>16:00–20:00</div></div>
+</div>
+<div style="margin-top:10px; font-size:13px; opacity:0.75;">Po wcześniejszej rejestracji telefonicznej</div>
+</div>
+
+<a class="btn btn-block" style="margin-top:16px;" href="tel:+48501550001">Zadzwoń</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uslugi">
+      <div class="container">
+        <div class="section-head">
+          <h2>Usługi</h2>
+          <p class="muted">Najczęstsze zakresy wizyt w gabinecie.</p>
+        </div>
+        <div class="grid">
+          <div class="service">
+            <h3>Konsultacja ortopedyczna</h3>
+            <p>Wywiad, badanie, omówienie objawów, interpretacja badań (RTG/MR/TK/USG), plan leczenia i rehabilitacji.</p>
+          </div>
+          <div class="service">
+            <h3>USG narządu ruchu</h3>
+            <p>Diagnostyka ścięgien, więzadeł, mięśni, kaletek, wysięków oraz zmian pourazowych.</p>
+          </div>
+          <div class="service">
+            <h3>Iniekcje dostawowe / okołostawowe</h3>
+            <p>Podanie leku do stawu lub tkanek okołostawowych. W wybranych wskazaniach — precyzyjnie pod kontrolą USG.</p>
+          </div>
+          <div class="service">
+            <h3>Terapia PRP</h3>
+            <p>Osocze bogatopłytkowe jako wsparcie leczenia przeciążeń i regeneracji tkanek (dobór wskazań indywidualnie).</p>
+          </div>
+          <div class="service">
+            <h3>Leczenie urazów i złamań</h3>
+            <p>Ocena urazu, prowadzenie leczenia zachowawczego, kontrole zrostu i powrotu do aktywności.</p>
+          </div>
+          <div class="service">
+            <h3>Kontrole i prowadzenie leczenia</h3>
+            <p>Kontynuacja leczenia, modyfikacja planu, kwalifikacja do rehabilitacji, monitorowanie efektów.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section alt" id="cennik">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cennik</h2>
+        </div>
+
+        <div class="card" style="font-size:18px;">
+          <strong>Konsultacja ortopedyczna, badanie USG narządu ruchu – 250 zł</strong>
+          <div class="divider"></div>
+          <div class="muted" style="line-height:1.7;">
+            W gabinecie wykonywane są również zabiegi, m.in.:
+            <ul class="list">
+              <li>Iniekcje dostawowe</li>
+              <li>Terapia kwasem hialuronowym</li>
+              <li>Steroidoterapia (blokady)</li>
+              <li>Endoproteza w płynie (wiskoproteza)</li>
+              <li>Terapia regeneracyjna: osocze bogatopłytkowe PRP</li>
+              <li>Fibryna I-PRF</li>
+              <li>Białko przeciwzapalne IL-1RA</li>
+            </ul>
+            Cena zabiegów ustalana indywidualnie w zależności od wskazań medycznych.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="o-mnie">
+      <div class="container two-col">
+        <div>
+          <h2>O mnie</h2>
+          <p class="muted" style="line-height:1.7">
+            Jestem lekarzem ortopedą. Pomagam pacjentom z urazami, przeciążeniami oraz dolegliwościami bólowymi stawów i ścięgien.
+          </p>
+          <p class="muted" style="line-height:1.7">
+            W gabinecie wykonuję badania USG narządu ruchu, dobieram leczenie zachowawcze oraz kwalifikuję do zabiegów i rehabilitacji.
+            W razie wskazań wykonuję iniekcje (także pod kontrolą USG) oraz terapię PRP.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">Zakres</div>
+          <ul class="list">
+            <li>Konsultacje ortopedyczne</li>
+            <li>USG narządu ruchu</li>
+            <li>Iniekcje dostawowe / okołostawowe</li>
+            <li>Terapia PRP</li>
+            <li>Leczenie urazów i złamań</li>
+          </ul>
+          <div class="divider"></div>
+          <div class="muted">Jeśli masz wyniki badań — zabierz je na wizytę.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p class="muted">Odpowiedzi na najczęstsze pytania.</p>
+        </div>
+
+        <div class="accordion">
+          <div class="faq">
+            <button type="button" aria-expanded="false" aria-controls="faq-a-1">
+              <span>Czy potrzebuję skierowania?</span><span class="chev">+</span>
+            </button>
+            <div class="a" id="faq-a-1" hidden>Nie. Wizyta prywatna nie wymaga skierowania.</div>
+          </div>
+
+          <div class="faq">
+            <button type="button" aria-expanded="false" aria-controls="faq-a-2">
+              <span>Co zabrać na wizytę?</span><span class="chev">+</span>
+            </button>
+            <div class="a" id="faq-a-2" hidden>Wyniki badań (RTG/MR/TK/USG), wypisy ze szpitala, listę leków oraz opis dolegliwości (od kiedy, co nasila/łagodzi).</div>
+          </div>
+
+          <div class="faq">
+            <button type="button" aria-expanded="false" aria-controls="faq-a-3">
+              <span>Czy można zrobić USG na wizycie?</span><span class="chev">+</span>
+            </button>
+            <div class="a" id="faq-a-3" hidden>Tak — USG narządu ruchu wykonuję w gabinecie. Jeśli jest taka potrzeba, omówimy wynik od razu i ustalimy plan leczenia.</div>
+          </div>
+
+          <div class="faq">
+            <button type="button" aria-expanded="false" aria-controls="faq-a-4">
+              <span>Czy iniekcje wykonujesz pod kontrolą USG?</span><span class="chev">+</span>
+            </button>
+            <div class="a" id="faq-a-4" hidden>Tak, w wybranych wskazaniach iniekcje mogą być wykonywane pod kontrolą USG, aby zwiększyć precyzję podania.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container two-col">
+        <div>
+          <h2>Kontakt</h2>
+          <div class="contact-box">
+            <div class="contact-item">
+              <div class="muted">Telefon</div>
+              <a href="tel:+48501550001">501 550 001</a>
+            </div>
+            <div class="contact-item">
+              <div class="muted">SMS</div>
+              <a href="sms:+48501287001">501 287 001</a>
+            </div>
+            
+            <div class="contact-item">
+              <div class="muted">Adres</div>
+              <div>ul. Kwiatowa 3A/1, 64-920 Piła (lokal użytkowy – od strony ul. Kwiatowej, narożny)</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-lg" href="tel:+48501550001">Zadzwoń</a>
+            
+          </div>
+
+          <p class="fineprint">Jeśli wolisz SMS, dopiszemy też przycisk „Wyślij SMS”.</p>
+        </div>
+
+        <div class="map card">
+          <!-- Podmień src na swój embed Google Maps -->
+          <iframe
+            title="Mapa"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Pi%C5%82a&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section micro" id="rodo">
+      <div class="container">
+        <h2>Informacje i RODO</h2>
+        <p class="muted" style="line-height:1.6">
+          Strona ma charakter informacyjny i nie stanowi porady medycznej. W sprawach zdrowotnych skonsultuj się z lekarzem.
+          Administrator danych: Gabinet ortopedyczny lek. Przemysław Wicher. Kontakt: .
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand-name">Gabinet ortopedyczny lek. Przemysław Wicher</div>
+        <div class="brand-tagline">Piła</div>
+      </div>
+      <div class="footer-right">
+        <span id="year"></span> • Wszelkie prawa zastrzeżone
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Gabinet ortopedyczny lek. Przemysław Wicher",
+    "telephone": "+48501550001",
+    "email": "",
+    "areaServed": "Piła"
+  }
+  </script>
+
+  <script>
+// FAQ accordion
+    (function(){
+      document.querySelectorAll('.faq button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          const id = btn.getAttribute('aria-controls');
+          const a = document.getElementById(id);
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (a) a.hidden = expanded;
+          const chev = btn.querySelector('.chev');
+          if (chev) chev.textContent = expanded ? '+' : '–';
+        });
+      });
+    })();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
